@@ -26,3 +26,4 @@ You do *not* need to set up a database or any interactivity on the webpage yet. 
 
 
 Ali's version of boot.dev's Notely app.
+ 
