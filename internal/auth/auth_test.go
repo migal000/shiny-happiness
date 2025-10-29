@@ -12,7 +12,7 @@ func TestGetAPIKey(t *testing.T) {
         wantKey    string
         wantErr    bool
     }{
-        {"happy path", "ApiKey abc123", "abc123", false},
+        {"happy path", "ApiKey abc123", "totally-wrong", false},
         {"missing header", "", "", true},
         {"wrong scheme", "Bearer xyz", "", true},
         {"no key provided", "ApiKey", "", true},
