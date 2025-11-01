@@ -1,13 +1,12 @@
 name: ci
 
 on:
-  push:
-    branches: [main]
   pull_request:
     branches: [main]
 
 jobs:
   tests:
+    name: Tests
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
@@ -20,8 +19,6 @@ jobs:
 
       - name: Run Tests
         run: go test ./... -cover
-
-
 
   style:
     name: Style
@@ -37,3 +34,4 @@ jobs:
 
       - name: Check formatting
         run: test -z "$(go fmt ./...)"
+
